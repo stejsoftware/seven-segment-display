@@ -1,0 +1,56 @@
+{
+  "name": "seven-segment-display",
+  "version": "0.1.0",
+  "description": "A React widget that is a 7 segment display",
+  "main": "lib/index.js",
+  "files": [
+    "src/",
+    "lib/",
+    "7-seg-display.js"
+  ],
+  "scripts": {
+    "build:node": "babel src --out-dir lib --source-maps inline",
+    "watch": "npm-run-all --parallel watch:*",
+    "watch:node": "onchange 'src/**/*.jsx' -i -- npm run build:node",
+    "test": "eslint src",
+    "umd": "rimraf 7-seg-display.js && webpack --config umd.webpack.js",
+    "build": "npm-run-all build:*",
+    "prepare": "npm run build && npm run umd",
+    "postpublish": "git push --tags"
+  },
+  "keywords": [
+    "seven",
+    "7",
+    "segment",
+    "display",
+    "react",
+    "widget"
+  ],
+  "author": "Jonathan Meyer <jon@stej.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^15.x.x"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "http-server": "^0.10.0",
+    "webpack": "^3.5.5",
+    "babel-cli": "6.14.0",
+    "babel-eslint": "6.1.2",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-2": "6.13.0",
+    "eslint": "^4.1.1",
+    "npm-run-all": "^3.1.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2",
+      "react"
+    ]
+  }
+}

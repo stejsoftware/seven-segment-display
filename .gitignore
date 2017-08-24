@@ -1,0 +1,7 @@
+node_modules/
+lib/
+docs/build
+7-seg-display.js
+*.log
+.idea
+.DS_Store
