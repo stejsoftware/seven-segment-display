@@ -4,8 +4,7 @@ module.exports = {
   entry: "./lib/index.js",
   output: {
     filename: "./7-seg-display.js",
-    libraryTarget: "umd",
-    library: "Display"
+    libraryTarget: "umd"
   },
   externals: {
     react: {

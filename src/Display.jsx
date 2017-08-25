@@ -2,6 +2,10 @@ import React from "react";
 import Digit from "./Digit";
 
 class Display extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <svg viewBox={[-1, -1, 12 * this.props.digitCount, 20]}>
