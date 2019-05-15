@@ -24,9 +24,12 @@ class Digit extends React.Component {
       "6": ["a", "f", "g", "c", "d", "e"],
       "7": ["a", "b", "c"],
       "8": ["a", "b", "c", "d", "e", "f", "g"],
-      "9": ["a", "b", "c", "d", "f", "g"],
-      " ": props.nullDisplay
+      "9": ["a", "b", "c", "d", "f", "g"]
     };
+
+    if (props.nullDisplay.length != 0) {
+      this.digits[" "] = props.nullDisplay;
+    }
   }
 
   getSegment(id) {
