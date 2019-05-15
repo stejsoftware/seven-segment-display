@@ -24,7 +24,8 @@ class Digit extends React.Component {
       "6": ["a", "f", "g", "c", "d", "e"],
       "7": ["a", "b", "c"],
       "8": ["a", "b", "c", "d", "e", "f", "g"],
-      "9": ["a", "b", "c", "d", "f", "g"]
+      "9": ["a", "b", "c", "d", "f", "g"],
+      " ": props.nullDisplay
     };
   }
 
@@ -61,7 +62,7 @@ class Digit extends React.Component {
           strokeLinejoin: "miter"
         }}
       >
-        {Object.keys(this.segments).map(key =>
+        {Object.keys(this.segments).map(key => (
           <polygon
             key={key}
             points={this.getSegment(key)}
@@ -72,7 +73,7 @@ class Digit extends React.Component {
                 : this.props.offOpacity
             }
           />
-        )}
+        ))}
       </g>
     );
   }
