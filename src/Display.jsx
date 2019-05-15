@@ -22,6 +22,7 @@ class Display extends React.Component {
               onOpacity={this.props.digitProps.onOpacity}
               offOpacity={this.props.digitProps.offOpacity}
               color={this.props.digitProps.color}
+              nullDisplay={this.props.nullDisplay}
             />
           ))}
       </svg>
@@ -31,7 +32,8 @@ class Display extends React.Component {
 
 Display.defaultProps = {
   digitCount: 4,
-  value: ""
+  value: "",
+  nullDisplay: []
 };
 
 export default Display;
