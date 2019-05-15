@@ -65,7 +65,7 @@ class Digit extends React.Component {
           strokeLinejoin: "miter"
         }}
       >
-        {Object.keys(this.segments).map(key => (
+        {Object.keys(this.segments).map(key =>
           <polygon
             key={key}
             points={this.getSegment(key)}
@@ -76,7 +76,7 @@ class Digit extends React.Component {
                 : this.props.offOpacity
             }
           />
-        ))}
+        )}
       </g>
     );
   }
