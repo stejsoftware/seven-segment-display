@@ -54,14 +54,14 @@ class Digit extends React.Component {
         ])}
         style={{
           fillRule: "evenodd",
-          stroke: "#fff",
+          stroke: this.props.strokeColor,
           strokeWidth: 0.25,
           strokeOpacity: 1,
           strokeLinecap: "butt",
           strokeLinejoin: "miter"
         }}
       >
-        {Object.keys(this.segments).map(key =>
+        {Object.keys(this.segments).map(key => (
           <polygon
             key={key}
             points={this.getSegment(key)}
@@ -72,7 +72,7 @@ class Digit extends React.Component {
                 : this.props.offOpacity
             }
           />
-        )}
+        ))}
       </g>
     );
   }
@@ -83,6 +83,7 @@ Digit.defaultProps = {
   onOpacity: 1,
   offOpacity: 0.15,
   color: "red",
+  strokeColor: "#fff",
   x: 0,
   y: 0
 };

@@ -22,7 +22,7 @@ class Colon extends React.Component {
           ])}
           style={{
             fillRule: "evenodd",
-            stroke: "#fff",
+            stroke: this.props.strokeColour,
             strokeWidth: 0.25,
             strokeOpacity: 1,
             strokeLinecap: "butt",
@@ -58,6 +58,7 @@ Colon.defaultProps = {
   onOpacity: 1,
   offOpacity: 0.15,
   color: "red",
+  strokeColor: "#fff",
   x: 0,
   y: 0
 };

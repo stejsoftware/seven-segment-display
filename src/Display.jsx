@@ -20,6 +20,7 @@ class Display extends React.Component {
               value={digit}
               x={key * 12}
               color={this.props.color}
+              strokeColor={this.props.strokeColor}
             />
           )}
       </svg>
@@ -29,7 +30,8 @@ class Display extends React.Component {
 
 Display.defaultProps = {
   digitCount: 4,
-  value: ""
+  value: "",
+  strokeColor: "#fff",
 };
 
 export default Display;
