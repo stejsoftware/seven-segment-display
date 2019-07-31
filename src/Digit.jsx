@@ -55,7 +55,7 @@ class Digit extends React.Component {
         ])}
         style={{
           fillRule: "evenodd",
-          stroke: "#fff",
+          stroke: this.props.strokeColor,
           strokeWidth: 0.25,
           strokeOpacity: 1,
           strokeLinecap: "butt",
@@ -84,6 +84,7 @@ Digit.defaultProps = {
   onOpacity: 1,
   offOpacity: 0.15,
   color: "red",
+  strokeColor: "#fff",
   x: 0,
   y: 0
 };

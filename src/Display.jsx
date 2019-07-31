@@ -19,6 +19,8 @@ class Display extends React.Component {
               key={key}
               value={digit}
               x={key * 12}
+              color={this.props.color}
+              strokeColor={this.props.strokeColor}
               onOpacity={this.props.digitProps.onOpacity}
               offOpacity={this.props.digitProps.offOpacity}
               color={this.props.digitProps.color}
@@ -33,6 +35,7 @@ class Display extends React.Component {
 Display.defaultProps = {
   digitCount: 4,
   value: "",
+  strokeColor: "#fff",
   nullDisplay: []
 };
 
