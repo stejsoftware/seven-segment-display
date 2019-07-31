@@ -14,14 +14,17 @@ class Display extends React.Component {
           .padStart(this.props.digitCount, " ")
           .split("")
           .slice(-this.props.digitCount)
-          .map((digit, key) =>
+          .map((digit, key) => (
             <Digit
               key={key}
               value={digit}
               x={key * 12}
-              color={this.props.color}
+              onOpacity={this.props.digitProps.onOpacity}
+              offOpacity={this.props.digitProps.offOpacity}
+              color={this.props.digitProps.color}
+              nullDisplay={this.props.nullDisplay}
             />
-          )}
+          ))}
       </svg>
     );
   }
@@ -29,7 +32,8 @@ class Display extends React.Component {
 
 Display.defaultProps = {
   digitCount: 4,
-  value: ""
+  value: "",
+  nullDisplay: []
 };
 
 export default Display;
